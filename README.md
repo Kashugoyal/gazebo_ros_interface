@@ -7,7 +7,7 @@
 The package demonstrates the usage of Gazebo simulation tool and its interfacing with ROS.
 
 ## Part 1: `rrbot` and ROS interfacing
-1. ### The Gazebo world - [rrbot.world](https://github.com/ ME495-EmbeddedSystems/homework-3-f2017-Kashugoyal/blob/starter/worlds/rrbot.world "rrbot.world")
+1. ### The Gazebo world - [rrbot.world](https://github.com/Kashugoyal/gazebo_ros_interface/tree/master/worlds/rrbot.world "rrbot.world")
    The world contains 4 models namely `House1`, `Pickup`, `Mailbox` and `Jersey Barrier`. 
 2. ###  The launch file - [rrbot_world.launch](https://github.com/Kashugoyal/gazebo_ros_interface/tree/master/launch/rrbot_world.launch "rrbot_world.launch")
    The launch file will launch the *Gazebo* simulator with the world file mentiond in the previous text and also spwan *rrbot* model. This can be seen in the following image. 
