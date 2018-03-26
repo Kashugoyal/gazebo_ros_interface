@@ -1,0 +1,16 @@
+<launch>
+	<arg name="jspub" default="false"/>
+	
+	<rosparam file="$(find rrbot_control_me495)/config/rrbot_control.yaml" command="load"/>
+
+	<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/rrbot" args="joint_state_controller" unless="$(arg jspub)"/>
+	
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+		<remap from="/joint_states" to="/rrbot/joint_states" unless="$(arg jspub)"/>
+	</node>
+	
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" if="$(arg jspub)"/>
+	
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find rrbot_description)/launch/rrbot.rviz"/>
+
+</launch>
