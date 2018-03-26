@@ -12,7 +12,7 @@ The package demonstrates the usage of Gazebo simulation tool and its interfacing
 2. ###  The launch file - [rrbot_world.launch](https://github.com/Kashugoyal/gazebo_ros_interface/tree/master/launch/rrbot_world.launch "rrbot_world.launch")
    The launch file will launch the *Gazebo* simulator with the world file mentiond in the previous text and also spwan *rrbot* model. This can be seen in the following image. 
 
-   <img src="https://github.com/Kashugoyal/gazebo_ros_interface/tree/master/screenshots/Screenshot%20from%202017-11-11%2020-02-46.png?raw=true" width=700>
+   <img src="https://github.com/Kashugoyal/gazebo_ros_interface/blob/master/screenshots/Screenshot%20from%202017-11-11%2020-02-46.png?raw=true" width=700>
 3. ### Viewing the camera image - rqt_image_view
    * To start the *rqt_image viewer*, we use the following command:
    ```
@@ -21,7 +21,7 @@ The package demonstrates the usage of Gazebo simulation tool and its interfacing
    > Make sure the correct topic is selected in the rqt window. It should be `/rrbot/camera1/image_raw`.
    * The view from the camera is:
    
-     <img src="https://github.com/Kashugoyal/gazebo_ros_interface/tree/master/screenshots/camera%20feed.png?raw=true" width=300>
+     <img src="https://github.com/Kashugoyal/gazebo_ros_interface/blob/master/screenshots/camera%20feed.png?raw=true" width=300>
 
    * The plugin responsible for simulating the camera is **camera_controller** and this can be seen in the file [rrbot.gazebo](https://github.com/Kashugoyal/gazebo_ros_interface/tree/master/urdf/rrbot.gazebo) file [here](https://github.com/ME495-EmbeddedSystems/homework-3-f2017-Kashugoyal/blob/3db140e81411683e53f91cd17e0b44cf6a721afe/urdf/rrbot.gazebo#L99 "Camera Plugin").
    * The simulated image is published on `/rrbot/camera1/image_raw` topic and this is defined in the rrbot.gazebo file inside the plugin tag. This can be seen [here](https://github.com/ME495-EmbeddedSystems/homework-3-f2017-Kashugoyal/blob/3db140e81411683e53f91cd17e0b44cf6a721afe/urdf/rrbot.gazebo#L102-L103).
@@ -39,10 +39,10 @@ The package demonstrates the usage of Gazebo simulation tool and its interfacing
 
     * With a noise setting such that mean is 0.0 and standard deviation is 0.01, following is observed in the *Rviz*
       
-         <img src="https://github.com/Kashugoyal/gazebo_ros_interface/tree/master/screenshots/laser_scan1.png?raw=true" width=500 border=2>
+         <img src="https://github.com/Kashugoyal/gazebo_ros_interface/blob/master/screenshots/laser_scan1.png?raw=true" width=500 border=2>
     * With a noise setting such that mean is 0.0 but standard deviation is 5, following is observedin *Rviz*
       
-         <img src="https://github.com/Kashugoyal/gazebo_ros_interface/tree/master/screenshots/laser_scan2.png?raw=true" width=500 border=2>
+         <img src="https://github.com/Kashugoyal/gazebo_ros_interface/blob/master/screenshots/laser_scan2.png?raw=true" width=500 border=2>
         
          > It can be seen that with high value of standard deviation, it is tough to extract any significant results out of the data which is nothing but a collection of randome dots. 
 
